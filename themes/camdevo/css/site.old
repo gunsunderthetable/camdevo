@@ -1,0 +1,968 @@
+/*  Created on : July-2015 | Author : Adrian Lynch */ 
+
+/* 1580 */
+
+
+#sidr, .mobile, #mobileLinks, .tablet, #mobileStories, .mobileHeader {display:none;}
+
+body {
+    font-family:"Open Sans", arial, sans-serif;
+    background:#ececec;
+    color: #1b1b1b;
+    line-height: 1.5;
+    min-height:900px;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight:700;
+    line-height:1.2;
+}
+
+p {
+    line-height:1.5;
+}
+
+a {
+    color:#0767B2;
+    -webkit-transition: color .15s ease-in;
+    transition: color .15s ease-in;
+}
+a:hover {
+    color:silver;
+}
+hr {
+    border:0;
+    height:1px;
+    background:silver;
+}
+
+/*---------------------------header----------------------------------*/
+/*.container {background:pink;}*/
+#header, #mobileHeader {
+    background-color:#1c4c55;
+    height:400px;
+    position:relative;
+    color:white;
+    width:100%;
+    margin:0 auto;
+}
+
+.HomePage #header {
+    box-shadow: 0 280px 0 white;
+}
+
+
+#header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;    
+  height: 400px;
+  background-image: url(../images/cambpet_7.jpg);
+  background-repeat: no-repeat;
+  background-size: 2000px 400px;
+  background-position: center top;
+  /*padding: 40px; (If don't want to set min-height or some image content is there) */
+  z-index:12;
+}
+
+
+#headerPanel {
+    position:relative;
+    height:360px;
+    /*-this is giving position to the pushed down boxes */
+
+}
+
+#headerText {
+    position:relative;
+    z-index:2;
+    width:100%;
+    float:left;
+    margin-top:40px;
+}
+
+#headerText img {
+    width:70%;
+    padding:100px 0 0 15%;
+
+}
+
+#socialButtons {
+    float:right;
+    height:40px;
+}
+#socialButtons img {
+    width:30px;
+    height:auto;
+    opacity:1;
+}
+
+/*-----------------home story boxes-----------------------------------------------------------------------*/
+#stories {
+    z-index:3;
+    padding-left:4%;
+}
+.story {
+    width:21.8%;
+    height:280px;
+    overflow:hidden;
+    float:left;
+    background:white;
+    padding:4px 1%;
+}
+.story.first {
+    padding-left:2%;
+}
+
+.storyInner {
+    color:black;
+    border-right:1px solid black;
+    height:260px;
+    padding-right:6%;
+}
+
+.first .storyInner {
+    margin-left:4%;
+}
+
+.last .storyInner {
+    border-right:0;
+    margin-right:4%;
+}
+
+.story h2 {
+    margin-top:20px;
+    font-size:1.3em;
+    color:black;
+}
+
+.story img {
+    width:100%;
+    height:auto;
+}
+/*-------------------------------- announcement --------------------------*/
+
+#announcementBar {
+    z-index: 99;
+    background:black;
+    margin-top:18px;
+    height:66px;
+}
+
+#announcementBar p {
+    /*padding:12px 20px 6px ;*/
+    text-align:center;
+}
+
+#announcementBar span {
+    display:inline-block;
+    height:100%;
+    background:grey;
+    padding:20px 40px 22px ;
+    margin-left: 20px
+
+}
+#announcementBar a {
+    color:white;
+}
+
+#announcementBar a:hover {
+    color:grey;
+}
+
+
+
+
+/*----------------------------main nav-----------------------------*/
+
+#navWrap {
+    position:fixed;
+    width:100%;
+    background:white;
+    z-index:29;
+}
+
+
+#mainNav {
+    font-size:1.1em;
+    width:100%;
+    height:66px;
+    padding:6px 0;
+    overflow:hidden;
+    position:relative;
+}
+
+#mainNav img {
+    width:30%;
+    padding-right:25px;
+    height:auto;
+    float:left;
+}
+
+#mainNav ul {
+    float:right;
+    padding:0 160px;
+    margin:0;
+}
+
+#mainNav li {
+    float:left;
+    margin:0;
+}
+
+#mainNav ul li a {
+	display:block;
+	float:left;
+	padding:8px 14px;
+	height:34px;
+	line-height:34px;
+    color:black;
+    -webkit-transition: color .15s ease-in;
+    transition: color .15s ease-in;        
+}
+
+
+#mainNav ul li a:hover,
+#mainNav ul li a:focus {
+    color:grey;
+}
+#mainNav ul li a.current,
+#mainNav ul li a.section {
+    color:white;
+}
+
+a.mobileNav {
+    position:absolute;
+    right:6px;
+    top:0px;
+    height:49px;    
+    display:block;
+    width:80px;
+    font-weight:normal;
+    font-size: 1.2em;
+    color:white;
+    background:black url(../images/mobile_menu.png) no-repeat 15px 20px;
+    background-size: 24px 24px;
+    padding:18px 0 0 55px;
+}
+
+
+/*---------------------------main homepage panel-----------------------*/
+#pagePanel {
+    width:92%;
+    padding:20px 4% 50px;
+    background:white;
+    color:black;
+    margin-bottom:30px;
+}
+
+#pagePanel.home {
+    padding-top:280px;
+    /*--padding makes room for the story boxes ----*/
+
+    background:transparent;
+}
+
+#homePageContent {
+    margin-bottom:30px;
+}
+/*-----------------------------------page styles---------------------------------------*/
+#breadBox {
+    margin:20px 0 20px;
+}
+#standardPage {
+    padding:0%;
+    width:100%;
+    margin: 30px 0 ;
+    min-height:250px;
+}
+
+
+.pageContent {
+    width:70%;
+    float:left;
+}
+
+.pageContent.members {
+    width:100%;
+}
+
+.pageContent ul li {
+    list-style:disc outside;
+    margin-left:36px;
+    padding-left:4px;
+    font-size:1.05em;
+}
+.pageContent.search ul li {
+    list-style:none;
+}
+.pageContent ol li {
+    list-style:decimal inside;
+    margin-left:20px;
+}
+.pageContent img {
+    max-width:100%;
+    height:auto;
+    padding-top:5px;
+}
+.rightPanel {
+    width:25%;
+    float:right;
+}
+
+#standardPage.fullWidthLayout .rightPanel {
+    display:none;
+}
+
+
+
+#landingText {
+    text-align:center;
+    margin-bottom:2em;
+}
+/*-----------------------------------Members ----------------------------------*/
+
+#memberDetails {
+    background:#d2d7d3;
+    padding:30px 3%;
+    width:94%;
+    margin-bottom:30px;
+}
+
+#memberText {
+    width:60%;
+    float:left;
+}
+
+img.memberPortrait {
+    width:33%;
+    height:auto;
+    float:right;
+}
+.memberBox a img:hover {
+    opacity:0.9;
+}
+
+.memberBox {
+    width:22%;
+    float:left;
+    margin:20px 1.5%;
+    text-align:center;
+}
+.memberBox a {
+    color:black;
+}
+.memberBox a:hover {
+    color:grey;
+}
+.pageContent .memberBox img {
+    width:100%;
+    max-width:100%;
+}
+
+/*----------------------------------------------Sub navigation--------------------------------------------*/
+#subNav {
+    border:1px solid silver;
+    background:white;
+    width:90%;
+    padding:5%;
+    margin-bottom:5%;
+    margin-top:26px;
+}
+
+#subNav.sidrNav {
+    border:0;
+    padding:6px 0 12px;
+    margin-top:0;
+    background:black;
+    color:white;
+}
+
+#subNav.sidrNav a {
+    color:white;
+}
+
+.sidrNav #menuImages {
+    padding:0 6px 8px 8px;
+    border-bottom: 1px solid white;
+}
+#subNav.sidrNav a:hover {
+    color:silver;
+}
+
+#subNav.sidrNav ul li ul.mobileChildren {
+    padding:0 0 0 3px;
+    margin-top: 0;
+}
+#subNav.sidrNav ul li ul.mobileChildren li a {
+    font-weight: normal;
+    font-size:1.05em;
+}
+img.menuLogo {
+    width:85%;
+}
+.sidr {
+    background:black;
+}
+
+#subNav h2 {
+    font-size:1.6em;
+    margin:0 0 20px;
+    letter-spacing:0.5px;
+}
+
+#subNav h3 {
+    margin-top:0;
+}
+
+.nav {
+    background:white;
+    padding:5%;
+}
+
+.nav ul li ul li.current {background:silver}
+
+.nav ul li ul li a:hover {
+    color:silver;
+}
+
+.nav ul li ul li.current a:hover {
+    color:white;
+} 
+.nav ul li {
+    border-bottom:none;
+    margin-bottom:6px;
+    padding:8px 0 4px 28px;    
+    background: url(../images/right_arrow.png) no-repeat 0 10px;
+}
+.nav ul li a {
+    font-size:1.1em;
+    font-weight:bold;
+    text-decoration:none;  
+    color:black;
+    margin:0 ;
+    line-height:1;
+    
+}
+.nav ul li a:hover {
+    color:silver;
+}
+.nav ul li a.current,#subNav ul li a.section  {color:grey;}
+/*#simpleNav ul li a.current, a.galleryTop.current {color:red;}*/
+
+
+
+/*-----------------------------------News and event panels-------------------------------*/
+#newsEventsWrap {
+    width:100%;
+}
+.feature {
+    padding-top:6px;
+    border-bottom:1px solid silver;
+}
+#news, #events {
+    min-height:400px;
+}
+#news {
+    width:28%;
+    background:white;
+    padding:8px 2%;
+    float:left;
+}
+#events {
+    width:65%;
+    float:right;
+}
+#news h2, #events h2 {
+    font-size:1.3em;
+    margin-top:8px;
+}
+#newsEventsWrap h3 {
+    font-size:1.1em;
+    padding:0;
+    margin:0 0 4px 0;
+}
+p.eventDates {
+    margin:0;
+}
+.grey {
+    color:grey;
+}
+
+a.readMore {
+    color:black;
+    display:inline-block;
+    width:auto;
+    margin:12px 0 0 0;
+    padding:4px 20px;
+    font-weight:normal;
+    border:1px solid black;
+}
+a.readMore:hover {
+    background:black;
+    color:white;
+}
+
+
+/*------------------------- sidebar ----------------------------*/
+
+.sideBar {
+    width:26.5%;
+    float:right;
+    margin:0 0 3% 2%;
+}
+
+.sideBar h2 {
+   font-size:1.3em;
+   padding:6px 0 8px 12px;
+   margin:0;
+   background:#97C4CD;
+   width:96%;
+}
+
+
+/*----------------------------------footer-------------------------------*/
+
+#footer {
+    margin-top:12px;
+    padding-top:20px;
+    min-height:60px;    
+    background:white;
+}
+
+#footer .left {
+    width:28%;
+    float:left;
+    border-right:1px solid grey;
+}
+
+#footer .left img {
+    width:90%;
+    height:auto;
+    padding:5%;
+}
+
+#footer .centre {
+    width:49%;
+    float:left;
+}
+#corporateLogos {
+    padding:0 18px 0 30px;
+}
+#footer .centre img {
+    width:25%;
+    margin-bottom:8px;
+    height:auto;
+    float:left;
+}
+
+#footer .right {
+    width:20%;
+    padding-left: 2%;
+    float:right;
+    border-left:1px solid grey;
+    min-height:144px;
+}
+#footer a {
+    color:black;
+}
+
+#footer a:hover {
+    color:silver;
+}
+
+/*----------------------sub - footer colophone-------------------------------*/
+#colophonFooter {
+    clear:both;
+    color:silver;
+    margin-top:24px;
+}
+.colophon p {
+    font-size: 1em;
+}
+.colophon.corp {
+    float:left;
+    width:50%;
+}
+.colophon.us {
+    float:right;
+    width:33%;
+}
+#colophonFooter {
+    padding:16px 0px;
+
+}
+
+/*------------image links in the left nav homepgae---------------------*/
+.imageLink {
+    position:relative;
+    background:#F05449;
+    margin:26px 0 0;
+    overflow:hidden;
+}
+.imageLink:hover {
+    opacity:0.7;
+}
+.imageLinkText {
+    width:80%;
+    margin-left:10%;
+    position:absolute;
+    top:32%;
+    text-align:center;
+}
+
+.imageLink h1 {
+    line-height:1;
+    letter-spacing:1px;
+    color:white;
+    font-weight:700;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+}
+.imageLink h2 {
+    font-size:1.8em;
+    line-height:1;
+    margin-bottom:8px;
+    background:transparent;
+    color:white;
+    font-weight:300;
+    text-shadow: 1px 1px 1px #000;    
+}
+
+.imageLink img {
+    width:100%;
+    height:auto;
+    opacity:0.8;
+    display:block;
+}
+.imageLink a {line-height:-1;}
+
+/*------------------------------------- widgets and stuff -------------------------------*/
+.widget {
+    margin-top:16px;
+    background:white;
+    border:1px solid silver;
+    padding:5%;
+    
+}
+.widget h3 {
+    font-size:2em;
+    margin:12px 0 10px;
+}
+
+
+/* ------------------images in content----------------------------------------*/
+img.left {
+    float:left;
+    padding-right:20px;
+    max-width:50%
+}
+
+img.right {
+    float:right;
+    padding-left:20px;
+    max-width:50%   
+}
+
+img.center {
+    float:none;
+    margin:0 auto;
+    max-width:50%;
+    display:block;
+    clear:both;
+}
+
+/*----------------------------- asset lister in page -----------------------------------------------*/
+
+.assetLister li.jpg, .assetLister li.jpeg{ background:url(../images/file-icons/jpg.png) no-repeat left top; }
+.assetLister li.mov, .assetLister li.mp4{ background:url(../images/file-icons/video.png) no-repeat left top; }
+.assetLister li.mp3 { background:url(../images/file-icons/mp3.png) no-repeat left top; }
+
+.assetLister li.ppt, .assetLister li.pptx{ background:url(../images/file-icons/blank.png) no-repeat left top; }
+.assetLister li.doc, .assetLister li.docx{ background:url(../images/file-icons/doc.png) no-repeat left top; }
+.assetLister li.png{ background:url(../images/file-icons/png.png) no-repeat left top; }
+.assetLister li.gif{ background:url(../images/file-icons/gif.png) no-repeat left top; }
+.assetLister li.xls, .assetLister li.xlsx{ background:url(../images/file-icons/xls.png) no-repeat left top; }
+.assetLister li.pdf{ background:url(../images/file-icons/pdf.png) no-repeat left top; }
+.assetLister li.csv{ background:url(../images/file-icons/csv.png) no-repeat left top; }
+
+.assetLister ul li {
+    list-style-type:none;
+    padding:0 0 12px 50px;
+    line-height:1.6;
+}
+
+.assetLister .size {
+    color:silver;
+}
+
+/*---------------------- pour le widget ---------------------------------------------------*/
+.assetListerWidget ul {
+    margin:26px 0 0 12px;
+}
+
+/*--------------------------------------blog ----------------------------------------------*/
+
+.blogSummary {
+    height:auto;
+    clear:left;
+    width:100%;
+    border-bottom:1px solid silver;
+    min-height:130px;
+    padding:12px 0 12px;
+    display:block;
+
+}
+.hfeed img {
+    float:right;
+    width:34%;
+    padding-left:3%;
+    height:auto;
+}
+.hfeed h1, .hfeed h2 {
+    margin:0 0 8px;;
+}
+.hfeed h1 a, .hfeed h2 a {
+    color:black;
+}
+.hfeed h1 {
+    font-size:1.8em;
+    font-weight:700;
+}
+.hfeed h2 {
+    font-size:1.2em;
+    font-weight:700;
+}
+.hfeed h1 a:hover, .hfeed h2 a:hover {
+    color:silver;
+}
+ol, ul {list-style-type:none}
+
+p.authorDate {color:grey;}
+
+p.readMore img.first {
+    padding-left:0;
+}
+p.readMore img:hover {
+    opacity:0.8;
+}
+
+.blogImage img {
+    float:left;
+    padding:0 20px 30px 0;
+}
+
+.blogImageThumb {
+    float:left;
+    padding:0 30px 0 0;
+    width:25%;
+    height:auto;
+}
+.blogImageThumb img {
+    width:100%;
+    height:auto;
+}
+.blogListing {
+    width:70%;
+    float:left;
+}
+.blogListing h2 {margin-top:0.1em;}
+
+p.tags {
+    margin-bottom:0;
+}
+p.shareBlogStory  {
+    margin:0 0 18px 0;
+}
+p.shareBlogStory img {
+    width:30px;
+    position: relative;
+    top:8px;
+}
+p.shareBlogStory img:hover {
+    cursor:pointer;
+    opacity:0.8;
+}
+p.shareBlogStory span {
+    padding-right:6px;
+}
+
+#blogContent {
+    clear:left;
+}
+/*----------------------------------Calendar-------------------------------*/
+
+body.Calendar .pageContent ul li {
+    list-style:none;
+}
+/*-----------------------------------forms------------------------------------*/
+input[type="text"],textarea {
+    width:50%;
+    background:#f6f6f6;
+}
+input[type="checkbox"] {
+    float:left;
+    display:block;
+    padding:4px 6px 0 0;
+    margin:6px 0 0;
+    height:12px;
+    width:20px;
+}
+.pageContent form ul li {
+    list-style:none;
+    margin:0 0 12px 20px;
+}
+
+
+/*---------------------------------Image Gallery------------------------------------*/
+#imageGallerytLister ul li{
+    list-style-type:none;
+}
+#imageGallerytLister ul li img {
+    width:22%;
+    margin:0 1% 12px 1%;
+    float:left;
+}
+#imageGallerytLister ul li img:hover {
+    opacity:0.8;
+}
+/*------------------------pagination----------------------------*/
+
+
+.pagination ul {
+    list-style-type:none;
+    padding:30px 0 0 0;
+}
+
+.pageContent .pagination li{
+    float:left;
+    line-height:1;
+    list-style-type:none;
+    margin-left:0;
+}
+
+.pagination a, .pagination .noLink{
+    float:left;
+    display:block;
+    border-right:1px solid #c1c1c1;
+    padding:0 8px;
+}
+
+.pagination a.last 
+{
+    border-right:none;
+}
+.pagination a.disabled {
+    color:silver;
+}
+.pagination .prev a,
+.pagination .next a{
+    border:none;
+    padding:0;
+}
+
+.pagination .prev a{
+    padding-right:16px;
+}
+
+.pagination .next a{
+    padding-left:16px;
+}
+.searchResults a.next {
+    border-right:0;
+}
+.searchResults .pageCount {
+    clear:left;
+    padding-top:16px;
+    font-size:1em;
+    color:grey;
+}
+/*-------------------------------- Clear and be happy--------------------------------------------------*/
+
+.clearFix {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/*--------------------------------start media queries for mobiles and tablets----------*/
+
+/* For devices larger than 400px  consider this the phone */
+@media (max-width: 1460px) {
+        .container {width:100%;}
+}
+
+@media (max-width: 1200px) {
+    .story {height:350px;}
+    .storyInner {height:310px;}
+    #pagePanel.home {padding-top:320px;}    /*--padding makes room for the story boxes ----*/
+    .colophon.corp, .colophon.us {width:43%;}
+    .colophon.us {text-align:right;}
+    
+    a.mobileNav {height:46px;}
+    #mainNav ul li a {display:none;}
+    #mainNav {height:64px;}
+}
+@media (max-width: 1060px) {
+    #mainNav img {width:365px;}
+} 
+@media (max-width: 960px) {
+    a.mobileNav {right:0;}
+    .desktop {display:none;}
+    .tablet {display:block;}
+    #mobileLinks {display:table;}
+    #homePanel {width:100%;}    
+    .pageContent.members img,.pageContent img.memberPortrait {display:block;}
+    .pageContent .memberDetails img
+    .headerPanel {height:auto;}
+    .pageContent,.rightPanel {width:100%;}
+    #breadBox {margin-left:0;}
+    .colophon.corp, .colophon.us {float:none;width:100%;text-align:center;}
+}
+
+@media (max-width: 900px) {
+    #stories {display:none;}
+    #mobileStories {position:relative;z-index:4;display:block;margin-bottom:20px;}
+    .mobileStory {;background:white;padding:20px 4% 30px;margin-bottom:20px;}
+    .mobileStory h2 {margin-top:0;}
+    .HomePage #header {box-shadow:none;}
+    #pagePanel.home {padding-top:10px;}
+    #news,#events {width:96%;height:auto;min-height:0;}
+    #news {margin-bottom:30px;}
+    #events {float:left;width:100%}
+    .memberBox h2 {font-size:1.3em;}
+      
+}
+@media (max-width: 760px) {
+
+    #footer .centre, #footer .right {display:none;} 
+    #footer .left {border-right:none;width:56%;padding-left:22%;}
+    .pageContent.members .memberBox {width:30%;}
+    #memberDetails {padding:30px 5%;width:90%;}
+
+}
+
+@media (max-width: 600px) {
+    .sb-search {right:110px;}
+    .mobile {display:block;}
+    a.mobileNav {width:60px;}
+    #mainNav img.desktopHeader {display:none;}
+    #mainNav img.mobileHeader {display:block;width:170px;height:auto;padding-top: 2px;}
+    #header {height:auto;padding-bottom:20px;}
+    #searchWrapper {width:80%;}
+    #headerText h1 {font-size:2em;}
+    #headerText p {font-size:1.4em;line-height:1.2;}
+    ul.event-calendar-quick-nav li {float:left;margin-right:4px;}
+    #jump-to-month .field {float:left;margin-right:4px;}
+    .pageContent.members .memberBox {width:47%;}
+
+}
+
+@media print
+{   body {border:5px dashed green;background:none;color:black;}
+    div *, .container {display:block; }
+   .pageContent,p,h1,h2 {color:black;display:block;}
+   .rightPanel {display:none;}
+    #pagePanel {display: block;}
+    img:display:none;
+}

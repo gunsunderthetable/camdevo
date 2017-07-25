@@ -1,0 +1,6 @@
+
+
+/*-----------------home story boxes need switching off if you are coming from the search results----------------*/
+#stories {
+    display:none;
+}

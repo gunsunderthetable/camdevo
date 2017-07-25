@@ -1,0 +1,4 @@
+login to the site as admin then open filezilla
+upload assetlister folder
+upload cloudbase folder
+upload mysite/code to mysite replacing the existing folder

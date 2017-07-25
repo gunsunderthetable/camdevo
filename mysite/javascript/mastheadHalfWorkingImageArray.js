@@ -1,0 +1,65 @@
+ $(document).ready(function(){
+ 	var $window = $(window);
+ 	var windowsize = $window.width();
+    if (windowsize > 600) {
+    	// we are using desktop or tablet - use the rotating backgrounds
+
+    	var backgroundArray = new Array();
+
+		$("ul#bimages li img").each(function() {
+
+		    var imgData = $(this).attr('src');
+		    if (imgData.length > 0) {
+		        backgroundArray.push(imgData);
+		    } 
+		});
+
+		//console.log(backgroundArray)
+
+
+	 	var imgArr = new Array( // relative paths of images
+		 'themes/camdevo/images/cambpet_1.jpg',
+		 'themes/camdevo/images/cambpet_2.jpg',
+		 'themes/camdevo/images/cambpet_3.jpg',
+		 'themes/camdevo/images/cambpet_4.jpg',
+		 'themes/camdevo/images/cambpet_5.jpg',
+		 'themes/camdevo/images/cambpet_6.jpg',
+		 'themes/camdevo/images/cambpet_7.jpg'
+	 );
+
+    } else {
+    	// change the background-image
+    	jQuery('#header').css('background-image', 'url(themes/camdevo/images/citycentredark.jpg)');
+    	jQuery('#header').css('background-size', '600px 515px');
+
+    	 var imgArr = new Array( // relative paths of images
+		 'themes/camdevo/images/wisbechdark.jpg',
+		 'themes/camdevo/images/cathedraldark.jpg',
+		 'themes/camdevo/images/chatterisdark.jpg',
+		 'themes/camdevo/images/elydark.jpg',
+		 'themes/camdevo/images/fenlanddark.jpg',
+		 'themes/camdevo/images/stivesdark.jpg',
+		 'themes/camdevo/images/citycentre.jpg'
+	 );
+
+    }	 
+	 var preloadArr = new Array();
+	 var i;
+	 
+	 /* preload images */
+	 for(i=0; i < imgArr.length; i++){
+	 preloadArr[i] = new Image();
+	 preloadArr[i].src = imgArr[i];
+	 }
+	 
+	 var currImg = 1;
+	 var intID = setInterval(changeImg, 6000);
+	 
+	 /* image rotator */
+	 function changeImg(){
+	 	$('#header').animate({opacity: 0.9}, 1000, function(){
+	 	$(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
+	 	}).animate({opacity: 1}, 100);
+	 }
+ 
+ });

@@ -1,0 +1,82 @@
+/*----- Tabs -----*/
+    .tabs {
+        width:100%;
+        display:inline-block;
+    }
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .pageContent ul.tab-links li {
+        list-style:none;
+    }
+    .tab-links li,.pageContent ul.tab-links li {
+        margin:0px 5px 0 0  ;
+        float:left;
+        list-style:none;
+    }
+
+    .tab-links li.first {
+        margin-left:0;
+        padding-left:0;
+    }
+ 
+    .tab-links a {
+        padding:9px 15px;
+        display:inline-block;
+        background:#D0D1D3;
+        font-size:16px;
+        font-weight:600;
+        color:#4c4c4c;
+        transition:all linear 0.15s;
+    }
+ 
+    .tab-links a:hover {
+        background:#a7cce5;
+        text-decoration:none;
+    }
+    ul.tab-links {
+        margin:0;
+        padding:0;
+    }
+ 
+    li.active a, li.active a:hover {
+        background:white;
+        color:#4c4c4c;
+    }
+
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        background:white;
+        min-height:343px;
+    }
+    #categoryMedia .tab-content {
+        background:#ececec;
+    }
+ 
+    #categoryMedia li.active a, #categoryMedia li.active a:hover {
+        background:#ececec;
+    }
+
+    .tab {
+        display:none;
+    }
+ 
+    .tab.active {
+        display:block;
+    }
+
+    #filesTab .assetLister ul {
+        margin-top:24px;
+    }
+
+    #filesTab .assetLister ul li {
+        margin-left:0;
+    }

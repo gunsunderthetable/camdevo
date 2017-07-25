@@ -1,0 +1,54 @@
+  
+
+<div id="header">
+    <% include MainNav %>
+    <div class="container">
+        <div id="headerPanel" class="twelve columns clearFix">
+            <div id="headerText">
+                <img class="mobile" src="themes/camdevo/images/headertext.png" alt="logo" />
+            </div>
+        </div>  
+        <% if $Stories %>
+        <div id="stories" class="clearFix">
+        <% loop $Stories %>
+            <div class="story $FirstLast">
+                <div class="storyInner">
+                <h2>$Title</h2>
+                <% if $StoryImageID %><img src="$StoryImage.CroppedImage(600,320).URL" alt="$Title" title="$Title" /><% end_if %>
+                $Description
+                <% if $PageID || $ExternalLink %>
+                    <% if $PageID %>
+                        <% with $Page %><a class="readMore" href="$Link">Read more</a><% end_with %>
+                    <% else %>
+                        <a class="readMore" href="$ExternalLink" target="_blank">Read more</a>
+                    <% end_if %>
+                <% end_if %>
+                </div>
+            </div>
+        <% end_loop %>
+        </div>
+        <% end_if %> 
+
+    </div>
+
+    <% if $Announcement %>
+    <div id="announcementBar">
+        <div class="container">
+            <div class="twelve columns clearFix">
+                <p>$Announcement 
+                <% if $AnnouncementLink || $AnnouncementExternalLink %>
+                    <% if AnnouncementExternalLink %>
+                        <span><a href="$AnnouncementExternalLink">VIEW</a></span>
+                    <% else_if $AnnouncementLink %>
+                        <span><a href="$AnnouncementLink.Link">VIEW</a></span>
+                    <% end_if %>
+                <% end_if %>
+                </p>
+            </div>
+        </div>
+    </div>
+    <% end_if %> 
+</div>
+
+
+

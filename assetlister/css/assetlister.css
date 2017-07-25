@@ -1,0 +1,30 @@
+/* 
+
+/* asset lister in page */
+
+.assetLister li.jpg, .assetLister li.jpeg{ background:url(../images/file-icons/jpg.png) no-repeat left top; }
+.assetLister li.mov, .assetLister li.mp4{ background:url(../images/file-icons/video.png) no-repeat left top; }
+.assetLister li.mp3 { background:url(../images/file-icons/mp3.png) no-repeat left top; }
+
+.assetLister li.ppt, .assetLister li.pptx{ background:url(../images/file-icons/blank.png) no-repeat left top; }
+.assetLister li.doc, .assetLister li.docx{ background:url(../images/file-icons/doc.png) no-repeat left top; }
+.assetLister li.png{ background:url(../images/file-icons/png.png) no-repeat left top; }
+.assetLister li.gif{ background:url(../images/file-icons/gif.png) no-repeat left top; }
+.assetLister li.xls, .assetLister li.xlsx{ background:url(../images/file-icons/xls.png) no-repeat left top; }
+.assetLister li.pdf{ background:url(../images/file-icons/pdf.png) no-repeat left top; }
+.assetLister li.csv{ background:url(../images/file-icons/csv.png) no-repeat left top; }
+
+.assetLister ul li {
+    list-style-type:none;
+    padding:0 0 12px 50px;
+    line-height:1.6;
+   
+}
+.assetLister .size {
+    color:silver;
+}
+
+/*---------------------- pour le widget ---------------------------------------------------*/
+.assetListerWidget ul {
+    margin-top:26px;
+}
