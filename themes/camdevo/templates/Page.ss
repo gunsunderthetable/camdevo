@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <% base_tag %>
         <title>$Title</title>
-        <meta name="description" content="Cambridgeshire Devo">
+        <meta name="description" content="$SiteConfig.Title - $Title">
         <meta name="agency" content="Adrian Lynch">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">       

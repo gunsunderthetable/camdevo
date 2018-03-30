@@ -116,14 +116,19 @@ class HomePage extends Page {
     }
 
     public function getPastEventsByDate() {
-      $eventDates = CalendarDateTime::get()->where("StartDate < CURDATE()")->sort('StartDate','DESC')->limit(5);
-      $events = new ArrayList();
+      if ($eventDates = CalendarDateTime::get()->where("StartDate < CURDATE()")->sort('StartDate','DESC')->limit(5)) {
+          $events = new ArrayList();
 
-      foreach($eventDates as $eventDate) {
-          $event = CalendarEvent::get()->byID($eventDate->EventID);
-          $events->push($event);   
+          foreach($eventDates as $eventDate) {
+              if($event = CalendarEvent::get()->byID($eventDate->EventID)) {
+                $events->push($event);   
+              }
+          }
+          if ($events) {
+            return $events;        
+          }
       }
-      return $events;
+
     }
    
 
